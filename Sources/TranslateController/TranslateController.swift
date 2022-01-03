@@ -7,7 +7,10 @@ public struct TranslateController: UIViewControllerRepresentable {
     
     public typealias UIViewControllerType = UINavigationController
     
-    public init() {}
+    public init(text:Binding<String>,showing:Binding<Bool>) {
+        self.$text = text
+        self.$showing = showing
+    }
     
     public func makeUIViewController(context: Context) -> UINavigationController {
         let navController =  UINavigationController()
