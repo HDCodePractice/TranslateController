@@ -8,8 +8,8 @@ public struct TranslateController: UIViewControllerRepresentable {
     public typealias UIViewControllerType = UINavigationController
     
     public init(text:Binding<String>,showing:Binding<Bool>) {
-        self.$text = text
-        self.$showing = showing
+        self._text = text
+        self._showing = showing
     }
     
     public func makeUIViewController(context: Context) -> UINavigationController {
