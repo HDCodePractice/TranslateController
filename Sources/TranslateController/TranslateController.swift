@@ -7,6 +7,8 @@ public struct TranslateController: UIViewControllerRepresentable {
     
     public typealias UIViewControllerType = UINavigationController
     
+    public init() {}
+    
     public func makeUIViewController(context: Context) -> UINavigationController {
         let navController =  UINavigationController()
         navController.setNavigationBarHidden(true, animated: false)
