@@ -2,8 +2,8 @@ import SwiftUI
 import UIKit
 
 public struct TranslateController: UIViewControllerRepresentable {
-    @Binding var text : String
-    @Binding var showing : Bool
+    @Binding public var text : String
+    @Binding public var showing : Bool
     
     public typealias UIViewControllerType = UINavigationController
     
