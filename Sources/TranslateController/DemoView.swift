@@ -13,7 +13,7 @@ struct DemoView: View {
     
     var body: some View {
         ZStack{
-            TranslateController(text: $text, showing: $show_translate)
+            TranslateController(text: text, showing: $show_translate)
                 .frame(width: 0, height: 0)
             Button("Translate"){
                 show_translate = true

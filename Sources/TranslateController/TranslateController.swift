@@ -2,13 +2,13 @@ import SwiftUI
 import UIKit
 
 public struct TranslateController: UIViewControllerRepresentable {
-    @Binding public var text : String
+    public var text : String
     @Binding public var showing : Bool
     
     public typealias UIViewControllerType = UINavigationController
     
-    public init(text:Binding<String>,showing:Binding<Bool>) {
-        self._text = text
+    public init(text:String,showing:Binding<Bool>) {
+        self.text = text
         self._showing = showing
     }
     
