@@ -21,10 +21,8 @@ public struct TranslateController: UIViewControllerRepresentable {
     }
     
     public func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-        DispatchQueue.main.async {
-            if showing {
-                translate(uiViewController,text: text)
-            }
+        if showing {
+            translate(uiViewController,text: text)
         }
     }
     
@@ -43,9 +41,10 @@ public struct TranslateController: UIViewControllerRepresentable {
                 textView.selectAll(nil)
                 textView.perform(NSSelectorFromString(["_", "trans", "late:"].joined(separator: "")), with: nil)
                 
-
-                textView.removeFromSuperview()
-                showing = false
+                DispatchQueue.main.async {
+                    textView.removeFromSuperview()
+                    showing = false
+                }
             }
         }
     }
